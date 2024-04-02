@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Ranking from '../views/Ranking.vue'
 import KingRanking from '@/views/KingRanking.vue'
 import QueenRanking from '../views/QueenRanking.vue';
+import PointManager from '@/views/PointManager.vue';
+import Edit from '@/views/Edit.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,12 +26,12 @@ const router = createRouter({
     {
       path: "/points",
       name: "points",
-      component: () => import("../views/PointManager.vue"),
+      component: PointManager,
     },
     {
-      path: "/edit/:id",
+      path: "/edit/:id:green:gold:green_price:gold_price",
       name: "edit",
-      component: () => import("../views/Edit.vue"),
+      component: Edit,
     },
   ],
 });

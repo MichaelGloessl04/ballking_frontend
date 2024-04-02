@@ -1,25 +1,30 @@
 <template>
   <div class="conatiner">
-    <h1>Point Manager</h1>
+    <h1>Punkte</h1>
     <form>
-      <label for="search">Search:</label>
-      <input type="text" id="search" name="search" />
+      <label for="search">Suche:</label>
+      <input type="text" id="search" name="search" v-model="search" />
     </form>
-    <PointList />
+    <h2>Übersicht</h2>
+    <div>
+      Grün: {{ green_price }} € -> {{ green }} Punkte
+    </div>
+    <div>
+      Gold: {{ gold_price }} € -> {{ gold }} Punkte
+    </div>
+    <PointList :search="search" :green="green" :gold="gold" :green_price="green_price" :gold_price="gold_price"/>
   </div>
 </template>
 
 <script setup lang="ts">
-import axios from 'axios'
-import { onMounted } from 'vue';
+import { ref, type Ref} from 'vue';
 import PointList from '../components/PointList.vue'
 
-const fetchStudents = async () => {
-  const response = await axios.get('http://localhost:5000/api/students/')
-  console.log(response.data)
-}
+const green: Ref<number> = ref(3);
+const gold: Ref<number> = ref(5);
 
-onMounted(() => {
-  fetchStudents()
-})
+const green_price: Ref<number> = ref(3);
+const gold_price: Ref<number> = ref(5);
+
+const search: Ref<string> = ref('');
 </script>
