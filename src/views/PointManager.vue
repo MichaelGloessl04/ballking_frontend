@@ -1,15 +1,25 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="conatiner">
+    <h1>Point Manager</h1>
+    <form>
+      <label for="search">Search:</label>
+      <input type="text" id="search" name="search" />
+    </form>
+    <PointList />
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+<script setup lang="ts">
+import axios from 'axios'
+import { onMounted } from 'vue';
+import PointList from '../components/PointList.vue'
+
+const fetchStudents = async () => {
+  const response = await axios.get('http://localhost:5000/api/students/')
+  console.log(response.data)
 }
-</style>
+
+onMounted(() => {
+  fetchStudents()
+})
+</script>

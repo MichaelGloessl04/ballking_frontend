@@ -26,6 +26,11 @@ const router = createRouter({
       name: "points",
       component: () => import("../views/PointManager.vue"),
     },
+    {
+      path: "/edit/:id",
+      name: "edit",
+      component: () => import("../views/Edit.vue"),
+    },
   ],
 });
 
