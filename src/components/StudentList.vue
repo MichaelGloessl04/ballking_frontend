@@ -1,21 +1,49 @@
 <template>
-    <ul>
-        <li v-for="student in students" :key="student.id">
-        {{ student.name }}
-        </li>
-    </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>Platz</th>
+        <th>Maturant</th>
+        <th>Punkte</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="student in students" :key="student.id">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }} {{ student.surname }}</td>
+        <td>{{ student.points }}</td>
+      </tr>
+    </tbody>
+  </table>
 </template>
 
 <script setup lang="ts">
 import { type Student } from '../types/Student';
-import { onMounted, ref, type Ref } from 'vue';
 
-const students: Ref<Array<Student>> = ref([]);
-
-const updateStudents = async () => {
-  const response = await fetch('http://localhost:80/students');
-  students.value = await response.json();
-};
-
-onMounted(updateStudents);
+defineProps({
+  students: {
+    type: Array as () => Student[],
+    required: true
+  }
+});
 </script>
+
+<style scoped>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
