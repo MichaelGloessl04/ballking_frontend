@@ -1,20 +1,32 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Ranking from '../views/Ranking.vue'
+import KingRanking from '@/views/KingRanking.vue'
+import QueenRanking from '../views/QueenRanking.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: Ranking
+      path: "/",
+      name: "home",
+      component: Ranking,
     },
     {
-      path: '/points',
-      name: 'points',
-      component: () => import('../views/PointManager.vue')
+      path: "/king",
+      name: "king",
+      component: KingRanking,
     },
-  ]
-})
+    {
+      path: "/queen",
+      name: "queen",
+      component: QueenRanking,
+    },
+    {
+      path: "/points",
+      name: "points",
+      component: () => import("../views/PointManager.vue"),
+    },
+  ],
+});
 
 export default router
