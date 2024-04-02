@@ -17,7 +17,6 @@
 import GenderRanking from '../components/GenderRanking.vue';
 </script>
 
-
 <style scoped>
 .grid {
   display: grid;
