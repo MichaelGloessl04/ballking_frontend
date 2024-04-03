@@ -1,10 +1,10 @@
 <template>
-  <table class="uk-table uk-table-middle uk-table-responsive uk-table-striped uk-width-expand">
+  <table>
     <thead>
       <tr>
-        <th class="uk-table-expand">Platz</th>
-        <th class="uk-table-expand">Maturant</th>
-        <th class="uk-table-expand">Punkte</th>
+        <th>Platz</th>
+        <th>Maturant</th>
+        <th>Punkte</th>
       </tr>
     </thead>
     <tbody>
@@ -12,56 +12,6 @@
         <td>{{ students.indexOf(student) + 1 }}.</td>
         <td>{{ student.name }} {{ student.surname }}</td>
         <td>{{ student.points }}</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
       </tr>
     </tbody>
   </table>
@@ -82,5 +32,30 @@ defineProps({
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f0f0f0;
+}
+
+td:first-child {
+  text-align: center;
+}
+
+td:last-child {
+  text-align: right;
 }
 </style>
