@@ -6,10 +6,6 @@
   </div>
 </template>
 
-<script>
-import "../node_modules/uikit/src/less/uikit.less";
-</script>
-
 <style>
 .padlr {
   padding-left: calc(15px + 1vw);
@@ -26,5 +22,4 @@ import "../node_modules/uikit/src/less/uikit.less";
 .highlightheading {
   color: #f8f8f8;
 }
-
 </style>
