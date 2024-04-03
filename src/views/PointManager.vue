@@ -1,10 +1,12 @@
 <template>
   <div class="conatiner">
-    <h1>Punkte</h1>
-    <form>
-      <label for="search">Suche:</label>
-      <input type="text" id="search" name="search" v-model="search" />
+    <h1><span class="highlight highlightheading">Punkte</span></h1>
+    <div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search" v-model="search">
     </form>
+    </div>
     <h2>Übersicht</h2>
     <div>
       Grün: {{ green_price }} € -> {{ green }} Punkte

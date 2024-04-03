@@ -1,67 +1,23 @@
 <template>
-  <table class="uk-table uk-table-middle uk-table-responsive uk-table-striped uk-width-expand">
-    <thead>
-      <tr>
-        <th class="uk-table-expand">Platz</th>
-        <th class="uk-table-expand">Maturant</th>
-        <th class="uk-table-expand">Punkte</th>
-      </tr>
-    </thead>
+  <table class="uk-table uk-width-xlarge uk-table-divider">
     <tbody>
-      <tr v-for="student in students" :key="student.id">
-        <td>{{ students.indexOf(student) + 1 }}.</td>
+      <tr v-for="(student, index) in students" :key="student.id" :class="index % 2 === 0 ? 'even-row' : 'odd-row'">
         <td>{{ student.name }} {{ student.surname }}</td>
-        <td>{{ student.points }}</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
+        <td>Simon Schafferhofer</td>
       </tr>
       <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
+        <td>Lennard Nussmüller Langer Name</td>
       </tr>
       <tr>
-        <td>1</td>
         <td>Name</td>
-        <td>100</td>
       </tr>
       <tr>
-        <td>1</td>
         <td>Name</td>
-        <td>100</td>
       </tr>
       <tr>
-        <td>1</td>
         <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Name</td>
-        <td>100</td>
       </tr>
     </tbody>
   </table>
@@ -79,8 +35,11 @@ defineProps({
 </script>
 
 <style scoped>
-table {
+.table {
   width: 100%;
   border-collapse: collapse;
+}
+tr:nth-child(even) {
+  background-color: #eaf4ea;
 }
 </style>

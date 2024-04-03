@@ -1,7 +1,5 @@
 <template>
-  <main>
-    <StudentList :students="students"/>
-  </main>
+  <StudentList :students="students"/>
 </template>
 
 <script setup lang="ts">

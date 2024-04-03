@@ -11,12 +11,6 @@ import "../node_modules/uikit/src/less/uikit.less";
 </script>
 
 <style>
-h1 {
-  color: #f1f1f1;
-}
-h2, h3, h4, h5, h6, p {
-  color: black;
-}
 .padlr {
   padding-left: calc(15px + 1vw);
   padding-right: calc(15px + 1vw);
@@ -29,4 +23,8 @@ h2, h3, h4, h5, h6, p {
   margin: -2px -6px;
   padding:  2px  6px;
 }
+.highlightheading {
+  color: #f8f8f8;
+}
+
 </style>
