@@ -1,7 +1,7 @@
 <template>
   <main>
     <div>
-      <h1><span class="highlight">Ballkönigin</span></h1>
+      <h2>Ballkönigin</h2>
       <GenderRanking :gender="'f'"/>
     </div>
   </main>
