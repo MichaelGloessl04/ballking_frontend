@@ -9,7 +9,6 @@
     </thead>
     <tbody>
       <tr v-for="student in students" :key="student.id">
-        <td>{{ students.indexOf(student) + 1 }}.</td>
         <td>{{ student.name }} {{ student.surname }}</td>
         <td>{{ student.points }}</td>
       </tr>

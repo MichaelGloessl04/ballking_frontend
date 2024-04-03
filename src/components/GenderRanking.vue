@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+import axios from 'axios';
 import StudentList from '../components/StudentList.vue';
 import { type Student } from '../types/Student';
 import { onMounted, ref, type Ref } from 'vue';
@@ -23,8 +24,8 @@ const createRanking = (students: Student[]) => {
 };
 
 const fetchStudents = async () => {
-  const response = await fetch(`http://localhost:5000/students/gender/${props.gender}`);
-  students.value = createRanking(await response.json());
+  const response = await axios.get(`http://localhost:5000/students/gender/${props.gender}`);
+  students.value = createRanking(await response.data);
 };
 
 onMounted(fetchStudents);
