@@ -53,7 +53,8 @@ const props = defineProps({
 });
 
 const fetchStudents = async () => {
-  const response = await axios.get(`http://localhost:5001/students?search=${props.search}`);
+  console.log(window.location.host)
+  const response = await axios.get(`http://${String(window.location.hostname)}:5001/students?search=${props.search}`);
   students.value = response.data;
 };
 
@@ -80,3 +81,24 @@ watch(() => props.search, () => {
   fetchStudents();
 });
 </script>
+
+
+<style scoped>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.container {
+  margin-top: 20px;
+}
+</style>

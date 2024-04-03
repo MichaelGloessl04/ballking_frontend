@@ -7,7 +7,7 @@
     </form>
     <h2>Übersicht</h2>
     <div>
-      Grün: {{ green_price }} € -> {{ green }} Punkte
+      Grün: {{ green_price }} € -> {{ green }} Punkt
     </div>
     <div>
       Gold: {{ gold_price }} € -> {{ gold }} Punkte
@@ -20,10 +20,10 @@
 import { ref, type Ref} from 'vue';
 import PointList from '../components/PointList.vue'
 
-const green: Ref<number> = ref(3);
-const gold: Ref<number> = ref(5);
+const green: Ref<number> = ref(1);
+const gold: Ref<number> = ref(3);
 
-const green_price: Ref<number> = ref(3);
+const green_price: Ref<number> = ref(2);
 const gold_price: Ref<number> = ref(5);
 
 const search: Ref<string> = ref('');
