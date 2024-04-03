@@ -1,5 +1,5 @@
 <template>
-  <table>
+  <table class="uk-table uk-width-xlarge uk-table-divider">
     <thead>
       <tr>
         <th>Maturant/in</th>
@@ -25,17 +25,11 @@ defineProps({
 </script>
 
 <style scoped>
-table {
+.table {
   width: 100%;
   border-collapse: collapse;
 }
-
-th, td {
-  border: 1px solid black;
-  padding: 5px;
-}
-
-th {
-  background-color: #f2f2f2;
+tr:nth-child(even) {
+  background-color: #eaf4ea;
 }
 </style>
