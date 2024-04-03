@@ -24,7 +24,7 @@ const createRanking = (students: Student[]) => {
 };
 
 const fetchStudents = async () => {
-  const response = await axios.get(`http://localhost:5000/students/gender/${props.gender}`);
+  const response = await axios.get(`http://localhost:5001/students/gender/${props.gender}`);
   students.value = createRanking(await response.data);
 };
 

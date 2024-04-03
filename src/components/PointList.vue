@@ -53,7 +53,7 @@ const props = defineProps({
 });
 
 const fetchStudents = async () => {
-  const response = await axios.get(`http://localhost:5000/students?search=${props.search}`);
+  const response = await axios.get(`http://localhost:5001/students?search=${props.search}`);
   students.value = response.data;
 };
 
