@@ -20,7 +20,7 @@ const props = defineProps({
 });
 
 const createRanking = (students: Student[]) => {
-  return students.sort((a, b) => b.points - a.points).slice(0, 10);
+  return students.sort((a, b) => b.points - a.points).slice(0, 5);
 };
 
 const fetchStudents = async () => {

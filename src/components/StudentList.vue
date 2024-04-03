@@ -2,15 +2,12 @@
   <table>
     <thead>
       <tr>
-        <th>Platz</th>
-        <th>Maturant</th>
-        <th>Punkte</th>
+        <th>Maturant/in</th>
       </tr>
     </thead>
     <tbody>
       <tr v-for="student in students" :key="student.id">
         <td>{{ student.name }} {{ student.surname }}</td>
-        <td>{{ student.points }}</td>
       </tr>
     </tbody>
   </table>
@@ -40,21 +37,5 @@ th, td {
 
 th {
   background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #f0f0f0;
-}
-
-td:first-child {
-  text-align: center;
-}
-
-td:last-child {
-  text-align: right;
 }
 </style>
