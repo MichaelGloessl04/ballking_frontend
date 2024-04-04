@@ -1,17 +1,23 @@
 <template>
-  <div class="conatiner">
-    <h1>Punkte</h1>
-    <form>
-      <label for="search">Suche:</label>
-      <input type="text" id="search" name="search" v-model="search" />
+  <div class="conatiner padlr">
+    <h1 class="highlightheading">Punktemanager</h1>
+    <hr>
+    <div class="uk-margin">
+    <form class="uk-search uk-search-navbar">
+        <span class="uk-search-icon-flip" uk-search-icon></span>
+        <input class="uk-search-input" name="search" type="search" id="search" placeholder="Search" aria-label="Search" v-model="search">
     </form>
+    </div>
+    <hr>
     <h2>Übersicht</h2>
     <div>
-      Grün: {{ green_price }} € -> {{ green }} Punkt
+      <span class="green">Grün:</span> {{ green_price }} € -> {{ green }} Punkte
     </div>
     <div>
-      Gold: {{ gold_price }} € -> {{ gold }} Punkte
+      <span class="gold">Gold:</span> {{ gold_price }} € -> {{ gold }} Punkte
     </div>
+    <hr>
+    <h2>Maturant/in</h2>
     <PointList :search="search" :green="green" :gold="gold" :green_price="green_price" :gold_price="gold_price"/>
   </div>
 </template>

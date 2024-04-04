@@ -2,11 +2,11 @@
   <main>
     <div class="grid">
       <div>
-        <h1><span class="highlight highlightheading">Ballkönigin</span></h1>
+        <h1><span class="highlightheading">Ballkönigin</span></h1>
         <GenderRanking :gender="'f'"/>
       </div>
       <div>
-        <h1><span class="highlight highlightheading">Ballkönig</span></h1>
+        <h1><span class="highlightheading">Ballkönig</span></h1>
         <GenderRanking :gender="'m'"/>
       </div>
     </div>
@@ -21,6 +21,6 @@ import GenderRanking from '../components/GenderRanking.vue';
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: calc(20px + 10vh);
+  gap: calc(15px + 5vw);
 }
 </style>
