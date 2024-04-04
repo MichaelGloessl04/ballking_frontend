@@ -29,7 +29,7 @@ const router = createRouter({
       component: PointManager,
     },
     {
-      path: "/edit/:id:green:gold:green_price:gold_price",
+      path: "/edit/",
       name: "edit",
       component: Edit,
     },

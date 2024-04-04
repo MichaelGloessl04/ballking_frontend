@@ -1,15 +1,17 @@
 <template>
-  <div class="container" style="overflow: auto;">
-    <table class="uk-table uk-width-xlarge@l uk-width-medium@s uk-table-divider">
+  <div>
+    <table class="uk-table uk-width-expand uk-table-divider">
       <thead>
         <tr>
           <th>Maturant/in</th>
+          <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr class="uk-button" v-for="student in students" :key="student.id" @click="add(student.id)">
-          <td>{{ student.name }} {{ student.surname }}</td>
-          <td>{{ student.points }}</td>
+        <tr v-for="student in students" :key="student.id" @click="add(student.id)">
+          <td>Simon Schafferhofer</td>
+          <td>50</td>
           <td uk-icon="icon: pencil"></td>
         </tr>
       </tbody>

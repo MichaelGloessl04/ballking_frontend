@@ -1,8 +1,6 @@
 <template>
-  <div class="main padlr padtop">
-    <div class="uk-position-center">
+  <div class="main padlr padtop uk-position-top-center">
       <RouterView />
-    </div>
   </div>
 </template>
  
@@ -12,7 +10,7 @@
   padding-right: calc(15px + 1vw);
 }
 .padtop {
-  padding-top: calc(15px + 2vh);
+  padding-top: calc(15px + 8vh);
 }
 .highlight {
   background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=228B22);
@@ -20,10 +18,9 @@
   padding:  2px  6px;
 }
 .highlightheading {
-  color: #f8f8f8;
   letter-spacing: 2px;
   padding: 0 5px;
-  background: #228B22
+  background: linear-gradient(to bottom, #0000 65%, #228B22 50%);
 }
 tr:nth-child(even) {
   background-color: #eaf4ea;

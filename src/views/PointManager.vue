@@ -1,5 +1,5 @@
 <template>
-  <div class="conatiner padlr">
+  <div class="conatiner padlr padtop">
     <h1 class="highlightheading">Punktemanager</h1>
     <hr>
     <div class="uk-margin">

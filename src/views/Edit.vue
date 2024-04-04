@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form class="padtop">
     <h3>{{ student.name }} {{ student.surname }} bearbeiten:</h3>
     <hr>
     <div class="uk-margin">
