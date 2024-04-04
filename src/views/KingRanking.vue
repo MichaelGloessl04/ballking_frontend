@@ -1,6 +1,6 @@
 <template>
   <main>
-    <div>
+    <div class="padtop">
       <h1><span class="highlightheading">Ballkönig</span></h1>
       <GenderRanking :gender="'m'"/>
     </div>
