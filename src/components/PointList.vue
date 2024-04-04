@@ -1,5 +1,5 @@
 <template>
-  <div class="container" style="overflow: auto;">
+  <div class="container">
     <table class="uk-table uk-width-xlarge@l uk-width-medium@s uk-table-divider">
       <thead>
         <tr>

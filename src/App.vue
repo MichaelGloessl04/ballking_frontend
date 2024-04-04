@@ -20,10 +20,9 @@
   padding:  2px  6px;
 }
 .highlightheading {
-  color: #f8f8f8;
   letter-spacing: 2px;
   padding: 0 5px;
-  background: #228B22
+  background: linear-gradient(to bottom, #0000 65%, #228B22 50%);
 }
 tr:nth-child(even) {
   background-color: #eaf4ea;
