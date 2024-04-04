@@ -1,21 +1,16 @@
 <template>
-  <div class="container">
-    <h2>Maturant/innen</h2>
-    <table class="table">
+  <div class="container" style="overflow: auto;">
+    <table class="uk-table uk-width-xlarge@l uk-width-medium@s uk-table-divider">
       <thead>
         <tr>
           <th>Maturant/in</th>
-          <th>Punkte</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="student in students" :key="student.id">
+        <tr class="uk-button" v-for="student in students" :key="student.id" @click="add(student.id)">
           <td>{{ student.name }} {{ student.surname }}</td>
           <td>{{ student.points }}</td>
-          <td>
-            <button class="btn btn-primary" @click="add(student.id)">Punkte Hinzufügen</button>
-          </td>
+          <td uk-icon="icon: pencil"></td>
         </tr>
       </tbody>
     </table>
@@ -84,21 +79,4 @@ watch(() => props.search, () => {
 
 
 <style scoped>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  border: 1px solid black;
-  padding: 5px;
-}
-
-th {
-  background-color: #f2f2f2;
-}
-
-.container {
-  margin-top: 20px;
-}
 </style>

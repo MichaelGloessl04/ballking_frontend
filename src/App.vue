@@ -21,6 +21,17 @@
 }
 .highlightheading {
   color: #f8f8f8;
+  letter-spacing: 2px;
+  padding: 0 5px;
+  background: #228B22
 }
- 
+tr:nth-child(even) {
+  background-color: #eaf4ea;
+}
+.green {
+  color: #228B22;
+}
+.gold {
+  color: gold;
+}
 </style>

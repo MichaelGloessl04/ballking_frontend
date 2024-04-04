@@ -1,19 +1,28 @@
 <template>
-  <h1>{{ student.name }} {{ student.surname }}</h1>
   <form>
-    <div class="form-group">
-      <label for="green">Grün:</label>
-      <input type="number" id="green" name="green" v-model="green" class="form-control" />
+    <h3>{{ student.name }} {{ student.surname }} bearbeiten:</h3>
+    <hr>
+    <div class="uk-margin">
+        <p><span class="green">Grüne</span> Sterne:</p>
+        <div class="uk-inline">
+            <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
+            <input class="uk-input" type="number" name="green" v-model="green" placeholder="1">
+        </div>
     </div>
-    <div class="form-group">
-      <label for="gold">Gold:</label>
-      <input type="number" id="gold" name="gold" v-model="gold" class="form-control" />
+    <div class="uk-margin">
+        <p><span class="gold">Goldene</span> Sterne:</p>
+        <div class="uk-inline">
+            <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
+            <input class="uk-input" type="number" name="gold" v-model="gold" placeholder="1">
+        </div>
     </div>
-    <div>
+    <div class="uk-text-lead">
       Preis: {{ (green * Number(route.params.green_price)) + (gold * Number(route.params.gold_price)) }} €
     </div>
-    <button type="button" class="btn btn-secondary" @click="back">Zurück</button>
-    <button type="submit" class="btn btn-primary" @click="save">Speichern</button>
+    <hr>
+    <button type="button" class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom" @click="back">Zurück</button>
+    <br>
+    <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" @click="save">Speichern</button>
   </form>
 </template>
 
