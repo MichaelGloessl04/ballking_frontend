@@ -10,8 +10,8 @@
       </thead>
       <tbody>
         <tr v-for="student in students" :key="student.id" @click="add(student.id)">
-          <td>Simon Schafferhofer</td>
-          <td>50</td>
+          <td>{{ student.name }} {{ student.surname }}</td>
+          <td>{{ student.points }}</td>
           <td uk-icon="icon: pencil"></td>
         </tr>
       </tbody>
