@@ -10,10 +10,10 @@
     </div>
     <hr>
     <h2>Übersicht</h2>
-    <div>
+    <div class="uk-text-bold">
       <span class="green">Grün:</span> {{ green_price }} € -> {{ green }} Punkte
     </div>
-    <div>
+    <div class="uk-text-bold">
       <span class="gold">Gold:</span> {{ gold_price }} € -> {{ gold }} Punkte
     </div>
     <hr>

@@ -10,7 +10,7 @@
   padding-right: calc(15px + 1vw);
 }
 .padtop {
-  padding-top: calc(15px + 8vh);
+  padding-top: calc(15px + 4vh);
 }
 .highlight {
   background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=228B22);
@@ -19,7 +19,6 @@
 }
 .highlightheading {
   letter-spacing: 2px;
-  padding: 0 5px;
   background: linear-gradient(to bottom, #0000 65%, #228B22 50%);
 }
 tr:nth-child(even) {
