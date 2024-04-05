@@ -7,7 +7,7 @@
     </thead>
     <tbody>
       <tr v-for="student in students" :key="student.id">
-        <td>{{ student.name }} {{ student.surname }}</td>
+        <td class="uk-text-large">{{ student.name }} {{ student.surname }}</td>
       </tr>
     </tbody>
   </table>

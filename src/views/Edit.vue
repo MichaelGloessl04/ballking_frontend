@@ -1,22 +1,22 @@
 <template>
   <form class="padtop">
-    <h3>{{ student.name }} {{ student.surname }} bearbeiten:</h3>
+    <h3 class="lig">{{ student.name }} {{ student.surname }} bearbeiten:</h3>
     <hr>
     <div class="uk-margin">
-        <p><span class="green">Grüne</span> Sterne:</p>
+        <p class="mlig"><span class="green">Grüne</span> Sterne:</p>
         <div class="uk-inline">
             <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
             <input class="uk-input" type="number" name="green" v-model="green" placeholder="1">
         </div>
     </div>
     <div class="uk-margin">
-        <p><span class="gold">Goldene</span> Sterne:</p>
+        <p class="mlig"><span class="gold">Goldene</span> Sterne:</p>
         <div class="uk-inline">
             <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
             <input class="uk-input" type="number" name="gold" v-model="gold" placeholder="1">
         </div>
     </div>
-    <div class="uk-text-lead">
+    <div class="uk-text-large mlig">
       Preis: {{ (green * Number(route.params.green_price)) + (gold * Number(route.params.gold_price)) }} €
     </div>
     <hr>

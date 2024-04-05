@@ -9,15 +9,15 @@
     </form>
     </div>
     <hr>
-    <h2>Übersicht</h2>
-    <div class="uk-text-bold">
+    <h2 style="color: #d7d7d7;">Übersicht</h2>
+    <div class="uk-text-bold lig">
       <span class="green">Grün:</span> {{ green_price }} € -> {{ green }} Punkte
     </div>
-    <div class="uk-text-bold">
+    <div class="uk-text-bold lig">
       <span class="gold">Gold:</span> {{ gold_price }} € -> {{ gold }} Punkte
     </div>
     <hr>
-    <h2>Maturant/in</h2>
+    <h2 style="color: #d7d7d7;">Maturant/in</h2>
     <PointList :search="search" :green="green" :gold="gold" :green_price="green_price" :gold_price="gold_price"/>
   </div>
 </template>
