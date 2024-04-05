@@ -20,15 +20,17 @@ const props = defineProps({
 });
 
 const createRanking = (students: Student[]) => {
-  return students.sort((a, b) => b.points - a.points).slice(0, 5);
+  return students.sort((a, b) => b.points - a.points).slice(0, 5).sort((a, b) => a.id - b.id);
 };
 
 const fetchStudents = async () => {
-  const response = await axios.get(`http://${String(window.location.hostname)}:5001/students/gender/${props.gender}`);
-  students.value = createRanking(await response.data);
+  const response = await axios.get(`api/students/gender/${props.gender}`);
+  if (response.data != students.value) {
+    students.value = createRanking(await response.data);
+  }
 };
 
 onMounted(fetchStudents);
 
-setInterval(fetchStudents, 5000);
+setInterval(fetchStudents, 2000);
 </script>
