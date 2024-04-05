@@ -7917,10 +7917,10 @@ iframe[data-uk-cover] {
 /* Color
  ========================================================================== */
 .uk-background-default {
-  background-color: #fff;
+  background-color: #222;
 }
 .uk-background-muted {
-  background-color: #f8f8f8;
+  background-color: #222;
 }
 .uk-background-primary {
   background-color: #1e87f0;

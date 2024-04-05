@@ -1,20 +1,14 @@
 <template>
-  <div id="app">
-    <div class="uk-background-secondary">
-      <div class="padlr padtop uk-position-top-center">
-        <RouterView />
-      </div>
+  <div id="app">>
+    <div class="padlr padtop uk-position-top-center">
+      <RouterView />
     </div>
   </div>
 </template>
 
 <style>
-.uk-background-secondary {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+html {
+  background-color: #222 !important;
 }
 .padlr {
   padding-left: calc(15px + 1vw);
