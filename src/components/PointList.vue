@@ -3,16 +3,16 @@
     <table class="uk-table uk-width-expand uk-table-divider">
       <thead>
         <tr>
-          <th>Maturant/in</th>
+          <th></th>
           <th></th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="student in students" :key="student.id" @click="add(student.id)">
-          <td>{{ student.name }} {{ student.surname }}</td>
-          <td>{{ student.points }}</td>
-          <td uk-icon="icon: pencil"></td>
+        <tr v-for="student in students" :key="student.id" @click="add(student.id)" class="row-highlight">
+          <td class="mlig">{{ student.name }} {{ student.surname }}</td>
+          <td class="mlig">{{ student.points }}</td>
+          <td style="color: #d2d2d2;" uk-icon="icon: pencil"></td>
         </tr>
       </tbody>
     </table>
@@ -78,3 +78,10 @@ watch(() => props.search, () => {
   fetchStudents();
 });
 </script>
+
+<style scoped>
+.row-highlight:hover,
+.row-highlight:active {
+  background-color: #0f3b0f;
+}
+</style>
