@@ -51,7 +51,7 @@ const props = defineProps({
 
 const fetchStudents = async () => {
   console.log(window.location.host)
-  const response = await axios.get(`http://${window.location.hostname}:5001/students?search=${props.search}`);
+  const response = await axios.get(`/api/students?search=${props.search}`);
   students.value = response.data;
 };
 

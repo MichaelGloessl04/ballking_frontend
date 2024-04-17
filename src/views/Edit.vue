@@ -20,7 +20,7 @@
       Preis: {{ (green * Number(route.params.green_price)) + (gold * Number(route.params.gold_price)) }} €
     </div>
     <hr>
-    <button type="button" class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom">Zurück</button>
+    <button type="button" class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom" @click="back">Zurück</button>
     <br>
     <button type="submit" class="uk-button uk-button-primary uk-width-1-1 uk-margin-small-bottom" @click="save">Speichern</button>
   </form>
@@ -47,12 +47,12 @@ const gold: Ref<number> = ref(0);
 
 const save = async () => {
   student.value.points += (green.value * Number(route.params.green)) + (gold.value * Number(route.params.gold));
-  await axios.put(`http://${window.location.hostname}:5001/students/${route.params.id}`, student.value);
+  await axios.put(`/api/students/${route.params.id}`, student.value);
   back();
 };
 
 const fetchStudent = async () => {
-  const response = await axios.get(`http://${window.location.hostname}:5001/students/${route.params.id}`);
+  const response = await axios.get(`/api/students/${route.params.id}`);
   student.value = response.data;
 };
 
